@@ -1,0 +1,39 @@
+import random
+
+choices = ['rock', 'paper', 'scissors']
+mychoice = input("please choose either rock, paper, or scissors: ")
+comchoice = random.choice(choices)
+
+
+if mychoice.lower() not in choices:
+    mychoice = input("Please re-enter your choice.")
+
+while comchoice == choices[0]:
+    if mychoice == choices[0]:
+        print("You chose rock, and computer chose rock. It's a draw!");
+    elif mychoice == choices[1]:
+        print("You chose paper, and computer chose rock. You win!");
+    elif mychoice == choices[2]:
+        print("You chose scissors, and computer chose rock. You lose!");
+    break
+
+while comchoice == choices[1]:
+    if mychoice == choices[0]:
+        print("You chose rock, and computer chose rock. You lose!");
+    elif mychoice == choices[1]:
+        print("You chose paper, and computer chose paper. It's a draw!");
+    elif mychoice == choices[2]:
+       print("You chose scissors, and computer chose paper. You win!");
+    break
+
+while comchoice == choices[2]:
+    if mychoice == choices[0]:
+        print("You chose rock, and computer chose scissors. You win!");
+    elif mychoice == choices[1]:
+        print("You chose paper, and computer chose scissors. You lose!");
+    elif mychoice == choices[2]:
+        print("You chose scissors, and computer chose scissors. It's a draw!");
+        break
+
+
+
